@@ -6,12 +6,12 @@ STOCK = "TSLA"
 COMPANY_NAME = "Tesla Inc"
 
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
-STOCK_API_KEY = "WVBWXNNW6M4J3VEY"
+STOCK_API_KEY = "YOUR KEY"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
-NEWS_API_KEY = "cc81423667b94f94a497977b446dc19c"
+NEWS_API_KEY = "YOUR KEY"
 
-account_sid = "ACf0f882f3fee3ea34f344d5246df4c42a"
-auth_token = "917ded08892ec36a9ca93242d2eae900"
+account_sid = "YOUR SID ACCOUNT"
+auth_token = "YOUR AUTH TOKEN"
 
 
 stock_parameters = {
@@ -54,9 +54,9 @@ if rounded_percent_diff > 5 or rounded_percent_diff < -5:
         client = Client(account_sid, auth_token)
 
         message = client.messages.create(
-            from_='+18787887278',
+            from_='SENDER',
             body=f"{STOCK}: {symbol}\nHeadline: {title}\nBrief: {description} ",
-            to='+639760151450'
+            to='RECIPIENT'
         )
         print(message.status)
 
